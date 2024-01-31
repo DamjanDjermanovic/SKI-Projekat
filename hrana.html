@@ -20,10 +20,93 @@
             <a href="./puzzle.html">Puzzle</a>
         </div>
     </nav>
-    
+    <div id="main-section">
+        <div id="container">
+            <div id="burger">
+                <img src="./images/burger.png" alt="burger logo">
+            </div>
+            <div id="meni-info-container">
+                <div id="meni">
+                    <h2 id="meni-naslov">Burger:</h2>
+                    <form class="forma" id="meni-forma" name="meni" onchange="return promeniCenu()">
+                        <fieldset class="polja" required>
+                            <legend>Veličina:</legend>
+                            <div class="grupa">
+                                <input type="radio" id="obican" value=200 name="tip" checked>
+                                <label for="obican">Obican burger: 200,00 rsd</label>
+                            </div>
+                            <div class="grupa">
+                                <input type="radio" id="dupli" value=350 name="tip">
+                                <label for="dupli">Dupli burger: 350,00 rsd</label>
+                            </div>
+                            <div class="grupa">
+                                <input type="radio" id="tripl" value=450 name="tip">
+                                <label for="tripl">Tripl burger: 450,00 rsd</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="polja">
+                            <legend>Izaberite priloge:</legend>
+                            <div class="grupa">
+                                <input type="checkbox" id="sir" value=50 name="prilog">
+                                <label for="sir">Sir: 50,00 rsd</label>
+                            </div>
+                            <div class="grupa">
+                                <input type="checkbox" id="kecap" value=9.99 name="prilog">
+                                <label for="kecap">Kecap: 9,99 rsd</label>
+                            </div>
+                            <div class="grupa">
+                                <input type="checkbox" id="majonez" value=9.99 name="prilog">
+                                <label for="majonez">Majonez: 9,99 rsd</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="polja">
+                            <legend>Izaberite dodatke:</legend>
+                            <div class="grupa">
+                                <input type="checkbox" id="pomfrit" value=150 name="prilog">
+                                <label for="pomfrit">Pomfrit: 150,00 rsd</label>
+                            </div>
+                            <div class="grupa">
+                                <input type="checkbox" id="kola" value=79.99 name="prilog">
+                                <label for="kola">Kola: 79,99 rsd</label>
+                            </div>
+                            <div class="grupa">
+                                <input type="checkbox" id="salata" value=200 name="prilog">
+                                <label for="salata">Salata: 200,00 rsd</label>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div id="info">
+                    <h2 id="info-naslov">Informacije:</h2>
+                    <form class="forma" id="info-forma" name="info" onchange="return proveraValidnosti()">
+                        <fieldset class="polja">
+                            <legend>Ime i prezime:</legend>
+                            <input type="text" id="imePrezime" autocomplete="off">
+                        </fieldset>
+                        <fieldset class="polja">
+                            <legend>Adresa:</legend>
+                            <input type="text" id="adresa" autocomplete="off">
+                        </fieldset>
+                        <fieldset class="polja">
+                            <legend>Broj telefona:</legend>
+                            <input type="tel" id="brTel" autocomplete="off">
+                        </fieldset>
+                        <fieldset class="polja">
+                            <legend>Napomena:</legend>
+                            <input type="text" id="napomena" autocomplete="off">
+                        </fieldset>
+                        <button type="submit" id="poruci">Pošalji porudžbinu</button>
+                    </form>
+                    <p id="cena">CENA: 000,00 rsd</p>
+                </div>
+            </div>
+            <div id="inputGreska"></div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 Damjan Đermanović. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="scriptHrana.js"></script>
 </body>
 </html>
