@@ -32,7 +32,7 @@ infoForma.addEventListener('submit', e => {
         poruke.push('Adreska je obavezna');
     }
 
-    if (brTel.value.length < 9 || brTel.value.length > 11) {
+    if (brTel.value.length < 9 || brTel.value.length > 11 || !/^[0-9]+$/.test(brTel.value)) {
         poruke.push('Pogrešno unesen broj telefona')
     }
 

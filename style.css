@@ -10,7 +10,8 @@ body {
 
 .dugme,
 a,
-#poruci {
+#poruci,
+#start {
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -23,9 +24,12 @@ nav {
     top: 0;
     width: 100%;
     padding: 16px;
+    z-index: 1000;
+}
+
+.index-nav {
     background-color: rgba(34, 9, 44, 0.7);
     backdrop-filter: blur(10px);
-    z-index: 1000;
 }
 
 #nav-left {
@@ -280,7 +284,8 @@ legend {
     padding: 2px 5px;
 }
 
-#poruci {
+#poruci,
+#start {
     margin: 5px;
     padding: 8px 32px;
     font-size: 26px;
@@ -290,7 +295,13 @@ legend {
     border-radius: 10px;
 }
 
-#poruci:hover {
+#start {
+    margin-top: 10px;
+    font-size: 23px;
+}
+
+#poruci:hover,
+#start:hover {
     background-color: #F05941;
     color: #190724;
 }
@@ -340,8 +351,23 @@ input[type="checkbox"]:checked {
     background-color: #F05941;  
 }
 
-#inputGreska {
+#inputGreska,
+#timer {
     height: 25px;
     font-size: 23px;
     color: #F05941;
+}
+
+#timer {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    background-color: #190724;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 120px);
+
+    border-radius: 10px;
+    padding: 10px;
 }
